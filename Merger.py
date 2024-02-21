@@ -6,6 +6,7 @@ script_directory = os.path.dirname(os.path.abspath(__file__))
 directory = os.path.join(script_directory, 'results')
 
 # Output file name for the merged CSV
+outputdir=os.path.join(script_directory, 'resultats_combines')
 output_file = 'Resultats_combines_avec_date.csv'
 
 # List all CSV files in the directory
@@ -14,7 +15,7 @@ csv_files = [file for file in os.listdir(directory) if file.endswith('.csv')]
 first_csv = csv_files[0]
 
 # Write data from all CSV files (excluding headers) to the output file
-with open(os.path.join(directory, output_file), 'w', newline='') as outfile:
+with open(os.path.join(outputdir, output_file), 'w', newline='') as outfile:
     writer = csv.writer(outfile)
     for csv_file in csv_files:
         if csv_file != first_csv:
