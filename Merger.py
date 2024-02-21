@@ -7,7 +7,7 @@ directory = os.path.join(script_directory, 'results')
 
 # Output file name for the merged CSV
 outputdir=os.path.join(script_directory, 'resultats_combines')
-output_file = 'resultats_combined.csv'
+output_file = 'resultats_combined.csv' 
 
 # List all CSV files in the directory
 csv_files = [file for file in os.listdir(directory) if file.endswith('.csv')]
